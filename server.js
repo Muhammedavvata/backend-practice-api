@@ -1,6 +1,7 @@
 const express = require("express");
 const taskRoutes = require("./routes/task.routes");
 const requestRoutes = require("./routes/request.routes");
+const statusRoutes = require("./routes/status.routes");
 const requestLogger = require("./middleware/requestLogger");
 
 // Create an Express app
@@ -18,6 +19,9 @@ app.use("/api", taskRoutes);
 
 // Register request demo routes under /api/request-demo
 app.use("/api/request-demo", requestRoutes);
+
+// Register status demo routes under /api/status-demo
+app.use("/api/status-demo", statusRoutes);
 
 // Start the server
 app.listen(PORT, () => {
