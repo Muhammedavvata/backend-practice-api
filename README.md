@@ -100,7 +100,7 @@ Example:
 
 
 
-GET /api/tasks  
+GET /api/tasks
 
 POST /api/request-demo/body
 
@@ -122,11 +122,11 @@ Endpoints:
 
 
 
-GET /api/request-demo/params/:id  
+GET /api/request-demo/params/:id
 
-GET /api/request-demo/query?status=active\&page=1  
+GET /api/request-demo/query?status=active\&page=1
 
-POST /api/request-demo/body  
+POST /api/request-demo/body
 
 GET /api/request-demo/headers
 
@@ -166,17 +166,17 @@ Endpoints:
 
 
 
-GET /api/status-demo/ok  
+GET /api/status-demo/ok
 
-POST /api/status-demo/created  
+POST /api/status-demo/created
 
-POST /api/status-demo/bad-request  
+POST /api/status-demo/bad-request
 
-GET /api/status-demo/unauthorized  
+GET /api/status-demo/unauthorized
 
-GET /api/status-demo/forbidden  
+GET /api/status-demo/forbidden
 
-GET /api/status-demo/not-found  
+GET /api/status-demo/not-found
 
 GET /api/status-demo/server-error
 
@@ -199,6 +199,64 @@ Covered status codes:
 \- 404 Not Found
 
 \- 500 Internal Server Error
+
+
+
+\---
+
+\### Error Handling Demo
+
+
+
+This section demonstrates basic backend error handling in Express.js.
+
+
+
+Base route:
+
+
+
+/api/error-demo
+
+
+
+Endpoints:
+
+
+
+GET /api/error-demo/safe  
+
+POST /api/error-demo/validation  
+
+GET /api/error-demo/not-found  
+
+GET /api/error-demo/server-error  
+
+GET /api/error-demo/async-error
+
+
+
+Covered concepts:
+
+
+
+\- Direct validation error handling
+
+\- Centralized error handler middleware
+
+\- next(error)
+
+\- try/catch with async code
+
+\- 400 Bad Request
+
+\- 404 Not Found
+
+\- 500 Internal Server Error
+
+
+
+The centralized error handler is placed after all routes in server.js so it can catch errors passed using next(error).
 
 
 
@@ -289,4 +347,6 @@ Completed practice topics:
 \- Request \& Response
 
 \- HTTP Status Codes
+
+\- Error Handling
 
